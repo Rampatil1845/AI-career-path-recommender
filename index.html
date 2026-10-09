@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PathPilot - AI-powered career path generator. Discover your ideal tech career, get a personalized learning roadmap, and build real projects.">
+    <title>PathPilot — AI Career Path Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path d="M14 2L26 8V20L14 26L2 20V8L14 2Z" fill="#2B4CFF"/>
+                        <path d="M14 2L26 8L14 14L2 8L14 2Z" fill="#4D6AFF" opacity="0.8"/>
+                        <path d="M14 14V26L2 20V8L14 14Z" fill="#1A3AE8" opacity="0.6"/>
+                    </svg>
+                </div>
+                <span>PathPilot</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#career-explorer" class="nav-link">Career Explorer</a>
+                <a href="#career-insights" class="nav-link">Career Insights</a>
+                <a href="#learning-hub" class="nav-link">Learning Hub</a>
+                <a href="#projects-resources" class="nav-link">Projects & Resources</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </div>
+            <button class="nav-cta" onclick="navigateTo('career-explorer')">
+                Get Started <span class="cta-arrow">→</span>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HOME SECTION ========== -->
+    <section id="home" class="section section-home">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-tag">
+                    <span class="tag-dot"></span>
+                    AI-POWERED CAREER DISCOVERY PLATFORM
+                </div>
+                <h1 class="hero-title">
+                    Discover Your Ideal<br>
+                    <span class="gradient-text">Tech Career Path</span> with AI
+                </h1>
+                <p class="hero-description">
+                    Our AI analyzes your interests, thinking style, and strengths to recommend the perfect technology career path — complete with a personalized learning roadmap and real-world projects.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary btn-lg" onclick="navigateTo('career-explorer')">
+                        Find My Career <span class="btn-arrow">→</span>
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="navigateTo('learning-hub')">
+                        Explore Roadmaps
+                    </button>
+                </div>
+
+                <!-- Floating Stats -->
+                <div class="hero-stats">
+                    <div class="stat-chip">
+                        <div class="stat-icon">🎯</div>
+                        <div><strong>6+</strong> Career Paths</div>
+                    </div>
+                    <div class="stat-chip">
+                        <div class="stat-icon">📚</div>
+                        <div><strong>Free</strong> Courses</div>
+                    </div>
+                    <div class="stat-chip">
+                        <div class="stat-icon">🚀</div>
+                        <div><strong>Real</strong> Projects</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3-Step Workflow -->
+            <div class="workflow">
+                <div class="workflow-header">
+                    <span class="section-tag">HOW IT WORKS</span>
+                    <h2 class="section-title">Three Steps to Your Dream Career</h2>
+                    <p class="section-subtitle">A simple, AI-guided process to find your path in tech</p>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card" data-reveal>
+                        <div class="step-number">01</div>
+                        <div class="step-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2B4CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                        </div>
+                        <h3>Discover Your Career</h3>
+                        <p>Answer a few AI-driven questions about your interests and thinking style. No technical jargon — just honest preferences.</p>
+                    </div>
+                    <div class="step-connector">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2B4CFF" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="step-card" data-reveal>
+                        <div class="step-number">02</div>
+                        <div class="step-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2B4CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
+                        <h3>Learn Required Skills</h3>
+                        <p>Get a personalized roadmap with free courses, curated resources, and a clear learning timeline for your career.</p>
+                    </div>
+                    <div class="step-connector">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2B4CFF" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </div>
+                    <div class="step-card" data-reveal>
+                        <div class="step-number">03</div>
+                        <div class="step-icon-wrap">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2B4CFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                            </svg>
+                        </div>
+                        <h3>Build Real Projects</h3>
+                        <p>Apply your skills with guided portfolio projects — from beginner to advanced — and launch your tech career.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CAREER EXPLORER ========== -->
+    <section id="career-explorer" class="section section-explorer">
+        <div class="container">
+            <div class="explorer-header">
+                <span class="section-tag">AI CAREER EXPLORER</span>
+                <h2 class="section-title">Chat with Your AI Career Guide</h2>
+                <p class="section-subtitle">Answer a few simple questions and let our AI recommend the perfect tech career for you</p>
+            </div>
+
+            <div class="chat-container" id="chatContainer">
+                <div class="chat-window" id="chatWindow">
+                    <!-- Messages will be injected here by JS -->
+                </div>
+                <div class="chat-options" id="chatOptions">
+                    <!-- Option buttons injected by JS -->
+                </div>
+                <div class="chat-input-area" id="chatInputArea" style="display:none;">
+                    <button class="btn btn-primary" id="startQuizBtn" onclick="startQuiz()">
+                        Start Discovery <span class="btn-arrow">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CAREER INSIGHTS ========== -->
+    <section id="career-insights" class="section section-insights">
+        <div class="container">
+            <div class="insights-header">
+                <span class="section-tag">YOUR AI RESULTS</span>
+                <h2 class="section-title">Career Insights</h2>
+                <p class="section-subtitle">Your personalized career recommendation based on AI analysis</p>
+            </div>
+
+            <!-- Placeholder before analysis -->
+            <div class="insights-placeholder" id="insightsPlaceholder">
+                <div class="placeholder-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#B0B8C4" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <h3>Complete the Career Explorer First</h3>
+                <p>Head over to the Career Explorer section and answer a few questions. Your personalized career insights will appear here.</p>
+                <button class="btn btn-primary" onclick="navigateTo('career-explorer')">Start Exploration →</button>
+            </div>
+
+            <!-- Results (hidden until quiz complete) -->
+            <div class="insights-results" id="insightsResults" style="display:none;">
+                <!-- Career Result Card -->
+                <div class="result-card" data-reveal>
+                    <div class="result-header">
+                        <div class="result-badge">AI RECOMMENDED</div>
+                        <div class="result-icon" id="resultIcon">🧠</div>
+                        <h2 class="result-career" id="resultCareer">Data Scientist</h2>
+                        <p class="result-match" id="resultMatch">Based on your creative and analytical thinking style</p>
+                    </div>
+                    <div class="result-body">
+                        <div class="result-section">
+                            <h4>Role Overview</h4>
+                            <p id="resultOverview"></p>
+                        </div>
+                        <div class="result-section">
+                            <h4>Key Responsibilities</h4>
+                            <ul id="resultResponsibilities"></ul>
+                        </div>
+                        <div class="result-grid">
+                            <div class="result-section">
+                                <h4>Required Skills</h4>
+                                <div class="skill-tags" id="resultSkills"></div>
+                            </div>
+                            <div class="result-section">
+                                <h4>Tools & Technologies</h4>
+                                <div class="skill-tags" id="resultTools"></div>
+                            </div>
+                        </div>
+                        <div class="result-section">
+                            <h4>Industry Demand</h4>
+                            <div class="demand-bar">
+                                <div class="demand-fill" id="demandFill"></div>
+                                <span class="demand-label" id="demandLabel">High</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Gap Analyzer -->
+                <div class="skillgap-card" data-reveal>
+                    <div class="skillgap-header">
+                        <h3>⚡ Skill Gap Analyzer</h3>
+                        <p>Select the skills you already have to see your personalized learning path</p>
+                    </div>
+                    <div class="skillgap-checklist" id="skillgapChecklist">
+                        <!-- Checkboxes injected by JS -->
+                    </div>
+                    <button class="btn btn-primary" id="analyzeSkillsBtn" onclick="analyzeSkillGap()">
+                        Analyze My Skills <span class="btn-arrow">→</span>
+                    </button>
+
+                    <div class="skillgap-results" id="skillgapResults" style="display:none;">
+                        <div class="skillgap-group skillgap-have">
+                            <h4>✅ Skills You Have</h4>
+                            <div class="skill-tags" id="skillsHave"></div>
+                        </div>
+                        <div class="skillgap-group skillgap-need">
+                            <h4>📘 Skills to Learn</h4>
+                            <div class="skill-tags" id="skillsNeed"></div>
+                        </div>
+                        <button class="btn btn-primary" onclick="startLearning()">
+                            Start Learning <span class="btn-arrow">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LEARNING HUB ========== -->
+    <section id="learning-hub" class="section section-learning">
+        <div class="container">
+            <div class="learning-header">
+                <span class="section-tag">PERSONALIZED LEARNING</span>
+                <h2 class="section-title">Learning Hub</h2>
+                <p class="section-subtitle">Your step-by-step roadmap to mastering your recommended career</p>
+            </div>
+
+            <div class="learning-placeholder" id="learningPlaceholder">
+                <div class="placeholder-icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#B0B8C4" stroke-width="1.5">
+                        <path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/>
+                    </svg>
+                </div>
+                <h3>Complete Career Insights First</h3>
+                <p>After getting your career recommendation and analyzing your skills, your personalized learning roadmap will appear here.</p>
+                <button class="btn btn-primary" onclick="navigateTo('career-explorer')">Start Exploration →</button>
+            </div>
+
+            <div class="learning-content" id="learningContent" style="display:none;">
+                <!-- Roadmap Timeline -->
+                <div class="roadmap" id="roadmap">
+                    <h3 class="roadmap-title">🗺️ Your Learning Roadmap</h3>
+                    <div class="timeline" id="timeline">
+                        <!-- Timeline steps injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Course Cards -->
+                <div class="courses-section">
+                    <div class="course-tabs" id="courseTabs">
+                        <button class="course-tab active" data-type="free">Free Courses</button>
+                        <button class="course-tab" data-type="paid">Paid Courses</button>
+                    </div>
+                    
+                    <div class="courses-grid" id="freeCoursesGrid">
+                        <!-- Free course cards injected by JS -->
+                    </div>
+                    
+                    <div class="courses-grid" id="paidCoursesGrid" style="display:none;">
+                        <!-- Paid course cards injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS & RESOURCES ========== -->
+    <section id="projects-resources" class="section section-projects">
+        <div class="container">
+            <div class="projects-header">
+                <span class="section-tag">BUILD & PRACTICE</span>
+                <h2 class="section-title">Projects & Resources</h2>
+                <p class="section-subtitle">Apply your skills with real-world projects and essential developer resources</p>
+            </div>
+
+            <!-- Domain Tabs -->
+            <div class="domain-tabs" id="domainTabs">
+                <button class="domain-tab active" data-domain="ai-data">AI / Data</button>
+                <button class="domain-tab" data-domain="software-dev">Software Development</button>
+                <button class="domain-tab" data-domain="cybersecurity">Cybersecurity</button>
+            </div>
+
+            <!-- Project Cards -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Injected by JS -->
+            </div>
+
+            <!-- Resources -->
+            <div class="resources-section">
+                <h3 class="resources-title">🔗 Essential Resources</h3>
+                <div class="resources-grid">
+                    <a href="https://www.kaggle.com/datasets" target="_blank" class="resource-card" data-reveal>
+                        <div class="resource-icon">📊</div>
+                        <h4>Kaggle Datasets</h4>
+                        <p>Explore thousands of datasets for data science and ML projects</p>
+                        <span class="resource-link">Visit →</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="resource-card" data-reveal>
+                        <div class="resource-icon">🐙</div>
+                        <h4>GitHub</h4>
+                        <p>Host your code, collaborate, and build your developer portfolio</p>
+                        <span class="resource-link">Visit →</span>
+                    </a>
+                    <a href="https://stackoverflow.com" target="_blank" class="resource-card" data-reveal>
+                        <div class="resource-icon">💬</div>
+                        <h4>Stack Overflow</h4>
+                        <p>Join the largest developer community for Q&A and troubleshooting</p>
+                        <span class="resource-link">Visit →</span>
+                    </a>
+                    <a href="https://www.freecodecamp.org" target="_blank" class="resource-card" data-reveal>
+                        <div class="resource-icon">🎓</div>
+                        <h4>freeCodeCamp</h4>
+                        <p>Learn to code for free with interactive lessons and certifications</p>
+                        <span class="resource-link">Visit →</span>
+                    </a>
+                    <a href="https://www.coursera.org" target="_blank" class="resource-card" data-reveal>
+                        <div class="resource-icon">🏛️</div>
+                        <h4>Coursera</h4>
+                        <p>Access university-level courses from top institutions worldwide</p>
+                        <span class="resource-link">Visit →</span>
+                    </a>
+                    <a href="https://leetcode.com" target="_blank" class="resource-card" data-reveal>
+                        <div class="resource-icon">🧩</div>
+                        <h4>LeetCode</h4>
+                        <p>Practice coding challenges and prepare for technical interviews</p>
+                        <span class="resource-link">Visit →</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRICING ========== -->
+    <section id="pricing" class="section section-pricing" style="background: var(--bg-alt);">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 48px;">
+                <span class="section-tag">UPGRADE YOUR JOURNEY</span>
+                <h2 class="section-title">Simple Pricing for Smarter Career Guidance</h2>
+                <p class="section-subtitle">Start exploring careers for free, or upgrade for advanced AI guidance, limitless roadmaps, and custom projects.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Free Plan -->
+                <div class="pricing-card" data-reveal>
+                    <div class="pricing-header">
+                        <h3>Free</h3>
+                        <div class="pricing-price">
+                            <span class="amount">$0</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="pricing-desc">Explore the platform and begin your career discovery journey.</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="icon">✓</span> AI career quiz (max 3/month)</li>
+                        <li><span class="icon">✓</span> Basic career recommendation</li>
+                        <li><span class="icon">✓</span> Basic skill gap analysis</li>
+                        <li><span class="icon">✓</span> Access to Free Learning Hub (YouTube)</li>
+                        <li><span class="icon">✓</span> Basic learning roadmap</li>
+                        <li><span class="icon">✓</span> Limited project suggestions</li>
+                    </ul>
+                    <button class="pricing-btn free-btn" onclick="navigateTo('career-explorer')">Get Started Free</button>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="pricing-card pro" data-reveal>
+                    <div class="pro-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="pricing-price">
+                            <span class="amount">$7</span>
+                            <span class="period">/month</span>
+                        </div>
+                        <p class="pricing-desc">Deeper AI-powered career guidance and full learning support.</p>
+                        <p class="pricing-annual-desc">Or $69/year (Save 18%)</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="icon">✓</span> Unlimited AI career analysis</li>
+                        <li><span class="icon">✓</span> Full Skill Gap Analyzer</li>
+                        <li><span class="icon">✓</span> Personalized learning roadmap</li>
+                        <li><span class="icon">✓</span> Free and Paid Learning Hub complete access</li>
+                        <li><span class="icon">✓</span> Advanced project recommendations</li>
+                        <li><span class="icon">✓</span> Learning progress tracker</li>
+                        <li><span class="icon">✓</span> Early access to new AI features</li>
+                    </ul>
+                    <button class="pricing-btn pro-btn">Upgrade to Pro</button>
+                </div>
+            </div>
+
+            <p class="pricing-note">
+                <strong>Our Model:</strong> Free users can explore career paths and start learning immediately using curated free courses. Pro users unlock unlimited AI guidance, personalized roadmaps, and advanced learning recommendations.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========== PROGRESS TRACKER ========== -->
+    <div class="progress-tracker" id="progressTracker">
+        <div class="tracker-toggle" id="trackerToggle" onclick="toggleTracker()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+            <span>Progress</span>
+        </div>
+        <div class="tracker-panel" id="trackerPanel">
+            <h4>Your Journey</h4>
+            <div class="tracker-steps">
+                <div class="tracker-step completed" id="trackerStep1">
+                    <div class="tracker-dot"></div>
+                    <span>Career Selected</span>
+                </div>
+                <div class="tracker-step" id="trackerStep2">
+                    <div class="tracker-dot"></div>
+                    <span>Skill Gap Identified</span>
+                </div>
+                <div class="tracker-step" id="trackerStep3">
+                    <div class="tracker-dot"></div>
+                    <span>Courses Started</span>
+                </div>
+                <div class="tracker-step" id="trackerStep4">
+                    <div class="tracker-dot"></div>
+                    <span>Projects Built</span>
+                </div>
+            </div>
+            <div class="tracker-bar">
+                <div class="tracker-fill" id="trackerFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">PathPilot</span>
+                <span class="footer-copy">© 2026 PathPilot. All rights reserved.</span>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#career-explorer">Explore</a>
+                <a href="#learning-hub">Learn</a>
+                <a href="#projects-resources">Build</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
